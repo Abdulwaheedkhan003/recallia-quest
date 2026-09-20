@@ -265,20 +265,6 @@ FHIR_BEARER_TOKEN=eyJ...
 UNREAL_SIGNALLING_URL=ws://localhost:8888
 ```
 
-### What works without any credentials
-
-| Feature | Status |
-|---|---|
-| Accounts, auth, sessions | ✅ Full |
-| Daily routine, reminders, Web Push | ✅ Full |
-| 6 Brain games | ✅ Full |
-| Today's Song | ✅ Full |
-| Time Capsule uploads | ✅ Full |
-| Family circle, real-time chat | ✅ Full |
-| 2.5D Home Simulation | ✅ Full |
-| AI Companion (Lumi) | ⚙️ Needs `AI_PROVIDER` key or Ollama |
-| Hospital booking | ⚙️ Needs `FHIR_BASE_URL` |
-| 3D Unreal Home | ⚙️ Needs `UNREAL_SIGNALLING_URL` |
 
 ---
 
