@@ -1,0 +1,179 @@
+{
+  "bedroom": [
+    {
+      "id": "bed",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "wardrobe",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "clock",
+      "actions": [
+        "time"
+      ]
+    },
+    {
+      "id": "photo",
+      "actions": [
+        "go"
+      ]
+    },
+    {
+      "id": "lamp",
+      "actions": []
+    }
+  ],
+  "bathroom": [
+    {
+      "id": "toothbrush",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "sink",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "soap",
+      "actions": []
+    },
+    {
+      "id": "shower",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "mat",
+      "actions": []
+    }
+  ],
+  "kitchen": [
+    {
+      "id": "water",
+      "actions": [
+        "complete",
+        "remind"
+      ]
+    },
+    {
+      "id": "stove",
+      "actions": [
+        "remind"
+      ]
+    },
+    {
+      "id": "food",
+      "actions": [
+        "meal"
+      ]
+    },
+    {
+      "id": "fridge",
+      "actions": []
+    },
+    {
+      "id": "kettle",
+      "actions": []
+    }
+  ],
+  "living": [
+    {
+      "id": "radio",
+      "actions": [
+        "go"
+      ]
+    },
+    {
+      "id": "tv",
+      "actions": [
+        "go"
+      ]
+    },
+    {
+      "id": "sofa",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "phone",
+      "actions": [
+        "go"
+      ]
+    },
+    {
+      "id": "books",
+      "actions": [
+        "go"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "id": "table",
+      "actions": [
+        "meal"
+      ]
+    },
+    {
+      "id": "jug",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "plant",
+      "actions": []
+    }
+  ],
+  "entrance": [
+    {
+      "id": "door",
+      "actions": []
+    },
+    {
+      "id": "shoes",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "keys",
+      "actions": []
+    },
+    {
+      "id": "calendar",
+      "actions": [
+        "go"
+      ]
+    }
+  ],
+  "medicine": [
+    {
+      "id": "pillbox",
+      "actions": [
+        "meds"
+      ]
+    },
+    {
+      "id": "glass",
+      "actions": [
+        "complete"
+      ]
+    },
+    {
+      "id": "note",
+      "actions": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens ---------- */
+@theme {
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+
+  --color-cream: #fff8ec;
+  --color-parchment: #fdeed3;
+  --color-ink: #2b2140;
+  --color-ink-soft: #4a3f63;
+  --color-amber: #f5a524;
+  --color-amber-deep: #b86e00;
+  --color-coral: #f27f5b;
+  --color-teal: #1f8a7e;
+  --color-lavender: #8b7cf6;
+  --color-sky: #cfe8ff;
+  --color-leaf: #6dbf73;
+  --color-night: #1c1631;
+}
+
+/* ---------- Base ---------- */
+html {
+  font-size: calc(18px * var(--text-scale, 1));
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-cream text-ink font-body antialiased;
+  line-height: 1.6;
+}
+h1, h2, h3, h4 { @apply font-display; line-height: 1.15; }
+
+/* Strong, always-visible focus ring (never rely on color alone) */
+:focus-visible {
+  outline: 4px solid var(--color-lavender);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+.skip-link {
+  @apply absolute left-4 -top-20 z-[100] rounded-xl bg-ink px-5 py-3 text-cream font-bold;
+}
+.skip-link:focus { top: 1rem; }
+
+/* High-contrast mode */
+.hc { --color-ink-soft: #1b1528; }
+.hc body, body.hc { background: #ffffff; }
+
+/* Reduced motion: honour both OS setting and in-app toggle */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Soft ambient float used by decorative shapes */
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+.drift { animation: drift 7s ease-in-out infinite; will-change: transform; }

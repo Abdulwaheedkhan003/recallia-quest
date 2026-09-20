@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <!-- Deep gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0a1a;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1a0a2e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a1628;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Title glow gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8c8a0"/>
+      <stop offset="35%" style="stop-color:#fde68a"/>
+      <stop offset="65%" style="stop-color:#a7f3d0"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+    <!-- Radial glow for center orb -->
+    <radialGradient id="orbGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.4"/>
+      <stop offset="60%" style="stop-color:#8b5cf6;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0d0a1a;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Teal glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Title blur filter -->
+    <filter id="titleGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Soft glow filter for circles -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Ambient center orb -->
+  <ellipse cx="600" cy="250" rx="350" ry="280" fill="url(#orbGrad)">
+    <animate attributeName="rx" values="350;380;350" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="280;310;280" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Animated concentric rings -->
+  <circle cx="600" cy="250" r="180" fill="none" stroke="#8b5cf6" stroke-width="0.5" stroke-dasharray="4,8" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="360 600 250" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="250" r="220" fill="none" stroke="#6ee7b7" stroke-width="0.5" stroke-dasharray="2,12" opacity="0.3">
+    <animateTransform attributeName="transform" type="rotate" from="360 600 250" to="0 600 250" dur="55s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="250" r="265" fill="none" stroke="#fde68a" stroke-width="0.3" stroke-dasharray="6,20" opacity="0.25">
+    <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="360 600 250" dur="70s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="250" r="310" fill="none" stroke="#93c5fd" stroke-width="0.3" stroke-dasharray="3,25" opacity="0.2">
+    <animateTransform attributeName="transform" type="rotate" from="360 600 250" to="0 600 250" dur="90s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floating particles -->
+  <g opacity="0.6">
+    <!-- Left cluster -->
+    <circle cx="120" cy="100" r="2.5" fill="#fde68a" filter="url(#glow)">
+      <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="160" r="1.5" fill="#a7f3d0" filter="url(#glow)">
+      <animate attributeName="cy" values="160;140;160" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="200" r="2" fill="#c4b5fd" filter="url(#glow)">
+      <animate attributeName="cy" values="200;175;200" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="80" r="1.5" fill="#93c5fd">
+      <animate attributeName="cy" values="80;60;80" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="320" r="2" fill="#fde68a">
+      <animate attributeName="cy" values="320;295;320" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="400" r="1.5" fill="#6ee7b7">
+      <animate attributeName="cy" values="400;380;400" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Right cluster -->
+    <circle cx="1080" cy="100" r="2.5" fill="#fde68a" filter="url(#glow)">
+      <animate attributeName="cy" values="100;80;100" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="160" r="1.5" fill="#a7f3d0" filter="url(#glow)">
+      <animate attributeName="cy" values="160;140;160" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1120" cy="200" r="2" fill="#c4b5fd" filter="url(#glow)">
+      <animate attributeName="cy" values="200;175;200" dur="6.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1000" cy="80" r="1.5" fill="#93c5fd">
+      <animate attributeName="cy" values="80;60;80" dur="7.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1150" cy="320" r="2" fill="#fde68a">
+      <animate attributeName="cy" values="320;295;320" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1060" cy="400" r="1.5" fill="#6ee7b7">
+      <animate attributeName="cy" values="400;380;400" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Top/bottom -->
+    <circle cx="400" cy="40" r="1.5" fill="#fde68a">
+      <animate attributeName="cy" values="40;25;40" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="20" r="2" fill="#a7f3d0" filter="url(#glow)">
+      <animate attributeName="cy" values="20;5;20" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="45" r="1.5" fill="#c4b5fd">
+      <animate attributeName="cy" values="45;30;45" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="460" r="2" fill="#fde68a">
+      <animate attributeName="cy" values="460;478;460" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="480" r="1.5" fill="#93c5fd">
+      <animate attributeName="cy" values="480;495;480" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Neural network lines (left side) -->
+  <g opacity="0.2" stroke="#8b5cf6" stroke-width="0.8">
+    <line x1="120" y1="100" x2="160" y2="160"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/></line>
+    <line x1="160" y1="160" x2="80" y2="200"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.5s" repeatCount="indefinite"/></line>
+    <line x1="80" y1="200" x2="120" y2="100"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/></line>
+    <line x1="160" y1="160" x2="200" y2="80"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.5s" repeatCount="indefinite"/></line>
+    <line x1="80" y1="200" x2="50" y2="320"><animate attributeName="opacity" values="0.3;0.5;0.3" dur="3.8s" repeatCount="indefinite"/></line>
+    <line x1="140" y1="400" x2="50" y2="320"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="5s" repeatCount="indefinite"/></line>
+  </g>
+  <!-- Neural network lines (right side) -->
+  <g opacity="0.2" stroke="#6ee7b7" stroke-width="0.8">
+    <line x1="1080" y1="100" x2="1040" y2="160"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.2s" repeatCount="indefinite"/></line>
+    <line x1="1040" y1="160" x2="1120" y2="200"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.7s" repeatCount="indefinite"/></line>
+    <line x1="1120" y1="200" x2="1080" y2="100"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="4.2s" repeatCount="indefinite"/></line>
+    <line x1="1040" y1="160" x2="1000" y2="80"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.7s" repeatCount="indefinite"/></line>
+    <line x1="1120" y1="200" x2="1150" y2="320"><animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite"/></line>
+    <line x1="1060" y1="400" x2="1150" y2="320"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="5.2s" repeatCount="indefinite"/></line>
+  </g>
+
+  <!-- Icon emoji sparkle top-left -->
+  <text x="60" y="68" font-size="36" text-anchor="middle" opacity="0">🧠
+    <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" dur="6s" begin="0.5s" repeatCount="indefinite"/>
+  </text>
+  <text x="60" y="68" font-size="36" text-anchor="middle" opacity="0">💙
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0;0" dur="6s" begin="3.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- =================== MAIN TITLE =================== -->
+  <!-- Glow copy behind -->
+  <text x="600" y="198" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="900"
+    text-anchor="middle" fill="url(#titleGrad)" filter="url(#titleGlow)" opacity="0.5">RECALLIA QUEST</text>
+  <!-- Main sharp text -->
+  <text x="600" y="198" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="900"
+    text-anchor="middle" fill="url(#titleGrad)">
+    RECALLIA QUEST
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="240" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="400"
+    text-anchor="middle" fill="#d1d5db" letter-spacing="1">
+    Gentle Cognitive Adventure · Multilingual AI Companion · Reminiscence Therapy for Dementia Care
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Animated underline -->
+  <line x1="260" y1="252" x2="940" y2="252" stroke="url(#titleGrad)" stroke-width="1.5" opacity="0.4">
+    <animate attributeName="x1" values="260;300;260" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="940;900;940" dur="4s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- =================== BADGE PILLS =================== -->
+  <!-- Badge 1: 30+ Languages -->
+  <g transform="translate(122, 290)">
+    <rect rx="20" ry="20" width="188" height="42" fill="#1e1040" stroke="#8b5cf6" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="188" height="42" fill="none" stroke="#c4b5fd" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="94" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#c4b5fd">🌐  30+ Regional Languages</text>
+  </g>
+
+  <!-- Badge 2: Offline AI Privacy -->
+  <g transform="translate(334, 290)">
+    <rect rx="20" ry="20" width="188" height="42" fill="#0a2018" stroke="#6ee7b7" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="188" height="42" fill="none" stroke="#6ee7b7" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="94" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#6ee7b7">🔒  100% Offline AI Privacy</text>
+  </g>
+
+  <!-- Badge 3: FHIR R4 -->
+  <g transform="translate(546, 290)">
+    <rect rx="20" ry="20" width="188" height="42" fill="#0a1628" stroke="#93c5fd" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="188" height="42" fill="none" stroke="#93c5fd" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="94" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#93c5fd">🏥  FHIR R4 Hospital Ready</text>
+  </g>
+
+  <!-- Badge 4: Unreal Engine -->
+  <g transform="translate(758, 290)">
+    <rect rx="20" ry="20" width="188" height="42" fill="#1a100a" stroke="#fde68a" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="188" height="42" fill="none" stroke="#fde68a" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="94" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#fde68a">🎮  Unreal Engine 5.5 3D Home</text>
+  </g>
+
+  <!-- Badge 5: 6 Gentle Games -->
+  <g transform="translate(228, 350)">
+    <rect rx="20" ry="20" width="180" height="42" fill="#180a28" stroke="#f0abfc" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="180" height="42" fill="none" stroke="#f0abfc" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#f0abfc">🧩  6 Adaptive Brain Games</text>
+  </g>
+
+  <!-- Badge 6: Family Circle -->
+  <g transform="translate(432, 350)">
+    <rect rx="20" ry="20" width="180" height="42" fill="#0a180a" stroke="#86efac" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="180" height="42" fill="none" stroke="#86efac" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#86efac">❤️  Family Care Circle</text>
+  </g>
+
+  <!-- Badge 7: Lumi AI -->
+  <g transform="translate(636, 350)">
+    <rect rx="20" ry="20" width="180" height="42" fill="#1a0a14" stroke="#fda4af" stroke-width="1.2" opacity="0.9"/>
+    <rect rx="20" ry="20" width="180" height="42" fill="none" stroke="#fda4af" stroke-width="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700"
+      text-anchor="middle" fill="#fda4af">🤖  Lumi AI Companion</text>
+  </g>
+
+  <!-- =================== BOTTOM TECH STACK =================== -->
+  <text x="600" y="428" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400"
+    text-anchor="middle" fill="#6b7280" letter-spacing="2">
+    React 19  ·  TypeScript  ·  Vite  ·  Tailwind v4  ·  Node 22  ·  Express  ·  Three.js  ·  SQLite  ·  WebSockets  ·  Web Push
+  </text>
+
+  <!-- Animated scan line effect -->
+  <rect width="1200" height="2" fill="#8b5cf6" opacity="0">
+    <animate attributeName="y" values="-2;502" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.08;0.08;0" keyTimes="0;0.02;0.98;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bottom gradient fade -->
+  <linearGradient id="bottomFade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0d0a1a" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#0d0a1a" stop-opacity="0.5"/>
+  </linearGradient>
+  <rect y="380" width="1200" height="120" fill="url(#bottomFade)"/>
+
+  <!-- Top gradient fade -->
+  <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0d0a1a" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#0d0a1a" stop-opacity="0"/>
+  </linearGradient>
+  <rect y="0" width="1200" height="80" fill="url(#topFade)"/>
+</svg>

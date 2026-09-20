@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><!-- Original illustration for Recallia Quest sample data (no real person). -->
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe1b0"/><stop offset="1" stop-color="#f7b9a3"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="330" cy="70" r="36" fill="#fff4d6" opacity=".8"/>
+<path d="M90 400c10-80 60-120 110-120s100 40 110 120z" fill="#8b7cf6"/>
+<path d="M170 250h60v40c0 12-60 12-60 0z" fill="#b8764f"/>
+<ellipse cx="200" cy="190" rx="78" ry="86" fill="#c98a62"/>
+<path d="M118 190c-6-70 40-112 86-112 52 0 92 40 82 112-10-40-40-64-84-64s-72 26-84 64z" fill="#2b2140"/>
+<path d="M116 186c-10 50 0 110 20 130l14-60zM284 186c10 50 0 110-20 130l-14-60z" fill="#2b2140"/>
+<circle cx="172" cy="196" r="7" fill="#2b2140"/><circle cx="228" cy="196" r="7" fill="#2b2140"/>
+<path d="M176 232c14 14 34 14 48 0" stroke="#7a3b2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+<circle cx="154" cy="222" r="10" fill="#f27f5b" opacity=".35"/><circle cx="246" cy="222" r="10" fill="#f27f5b" opacity=".35"/>
+<circle cx="258" cy="112" r="12" fill="#f5a524"/>
+</svg>

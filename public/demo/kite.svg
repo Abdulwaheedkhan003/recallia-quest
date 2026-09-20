@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><!-- Original illustration for Recallia Quest sample data. -->
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd3ff"/><stop offset="1" stop-color="#ffe9c7"/></linearGradient></defs>
+<rect width="600" height="400" fill="url(#s)"/>
+<g fill="#fff" opacity=".85"><ellipse cx="120" cy="80" rx="50" ry="18"/><ellipse cx="160" cy="70" rx="36" ry="16"/></g>
+<path d="M420 60l50 50-50 60-50-60z" fill="#f5c518" stroke="#b86e00" stroke-width="4"/><path d="M420 60v110M370 110h100" stroke="#b86e00" stroke-width="3"/>
+<path d="M420 170c-10 30 10 40-6 70" stroke="#f27f5b" stroke-width="4" fill="none"/>
+<path d="M420 170C380 240 300 260 250 300" stroke="#555" stroke-width="2" fill="none"/>
+<rect y="300" width="600" height="100" fill="#d9c7a8"/><rect y="296" width="600" height="8" fill="#b89b72"/>
+<g><circle cx="230" cy="240" r="22" fill="#c98a62"/><path d="M208 232c0-24 44-24 44 0" fill="#2b2140"/><rect x="210" y="262" width="40" height="60" rx="16" fill="#8b7cf6"/><path d="M246 272l12-16" stroke="#c98a62" stroke-width="10" stroke-linecap="round"/></g>
+<g><circle cx="170" cy="246" r="22" fill="#b8764f"/><path d="M150 238c0-24 40-24 40 0" fill="#e6e6e6"/><rect x="150" y="268" width="40" height="56" rx="16" fill="#1f8a7e"/></g>
+</svg>

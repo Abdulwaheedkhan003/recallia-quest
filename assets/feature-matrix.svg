@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="1000" height="220">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c0a18"/>
+      <stop offset="100%" stop-color="#0a1420"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="220" fill="url(#bg)" rx="12"/>
+
+  <!-- Section title -->
+  <text x="500" y="30" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700"
+    text-anchor="middle" fill="#e5e7eb" letter-spacing="3">CORE FEATURES</text>
+
+  <!-- ===== Card 1: Daily Routine ===== -->
+  <g transform="translate(28, 50)">
+    <rect rx="14" width="138" height="148" fill="#1a100a" stroke="#fde68a" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#fde68a" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">🌅</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#fde68a">Daily Routine</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#78716c">Morning · Afternoon</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#78716c">Night · Medication</text>
+    <text x="69" y="110" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#78716c">Steps · Reminders</text>
+    <text x="69" y="130" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#92400e">WS Real-time · Push</text>
+  </g>
+
+  <!-- ===== Card 2: Lumi AI ===== -->
+  <g transform="translate(184, 50)">
+    <rect rx="14" width="138" height="148" fill="#100a1a" stroke="#c4b5fd" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#c4b5fd" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">🤖</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#c4b5fd">Lumi AI</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Voice + Text Chat</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Memory-Grounded</text>
+    <text x="69" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Zero Hallucination</text>
+    <text x="69" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Story Time · Booking</text>
+    <text x="69" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#7c3aed">Offline · Private · Safe</text>
+  </g>
+
+  <!-- ===== Card 3: Today's Song ===== -->
+  <g transform="translate(340, 50)">
+    <rect rx="14" width="138" height="148" fill="#0a100a" stroke="#86efac" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#86efac" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">🎵</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#86efac">Today's Song</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">MEAM Music Therapy</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Upload Audio / URL</text>
+    <text x="69" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Memory Reflection</text>
+    <text x="69" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Position Saved</text>
+    <text x="69" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#166534">Autobiographical RT</text>
+  </g>
+
+  <!-- ===== Card 4: Brain Games ===== -->
+  <g transform="translate(496, 50)">
+    <rect rx="14" width="138" height="148" fill="#180a10" stroke="#fda4af" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#fda4af" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">🧩</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#fda4af">Brain Games</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">6 Adaptive Games</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">No Failure Frustration</text>
+    <text x="69" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Progress Tracked</text>
+    <text x="69" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Adventure Handbook</text>
+    <text x="69" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#9f1239">Cognitive Stimulation</text>
+  </g>
+
+  <!-- ===== Card 5: Time Capsule ===== -->
+  <g transform="translate(652, 50)">
+    <rect rx="14" width="138" height="148" fill="#0a0f18" stroke="#93c5fd" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#93c5fd" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">⏳</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#93c5fd">Time Capsule</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Photo / Audio / Video</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Private Secure Upload</text>
+    <text x="69" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Family Circle Sharing</text>
+    <text x="69" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#4b5563">Invite Codes</text>
+    <text x="69" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#1d4ed8">Reminiscence Therapy</text>
+  </g>
+
+  <!-- ===== Card 6: 3D Home Sim ===== -->
+  <g transform="translate(834, 50)">
+    <rect rx="14" width="138" height="148" fill="#160a06" stroke="#fb923c" stroke-width="1.2" opacity="0.95"/>
+    <rect rx="14" width="138" height="148" fill="none" stroke="#fb923c" stroke-width="0.6" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="69" y="36" font-size="28" text-anchor="middle">🏡</text>
+    <text x="69" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="700"
+      text-anchor="middle" fill="#fb923c">Home Simulation</text>
+    <text x="69" y="79" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">2.5D + 3D UE5 Home</text>
+    <text x="69" y="93" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Spatial Orientation</text>
+    <text x="69" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Task Completion</text>
+    <text x="69" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="9"
+      text-anchor="middle" fill="#6b7280">Room Navigation</text>
+    <text x="69" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600"
+      text-anchor="middle" fill="#c2410c">Pixel Streaming</text>
+  </g>
+</svg>

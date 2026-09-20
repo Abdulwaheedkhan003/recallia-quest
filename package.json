@@ -1,0 +1,57 @@
+{
+  "name": "recallia-quest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "tsx watch --include .env server/index.ts",
+    "dev:web": "vite",
+    "build": "tsc -b && tsc -p tsconfig.server.json && vite build",
+    "start": "node --import tsx server/index.ts --production",
+    "preview": "vite preview",
+    "check:ai": "tsx scripts/check-ai.ts",
+    "i18n:check": "tsx scripts/i18n-check.ts",
+    "unreal:ids": "tsx scripts/export-sim-ids.ts",
+    "predev": "node scripts/preflight.mjs",
+    "prestart": "node scripts/preflight.mjs",
+    "ft:data": "tsx finetune/gen-dataset.ts",
+    "ft:eval": "tsx finetune/eval.ts",
+    "i18n:translate": "tsx scripts/translate-locale.ts"
+  },
+  "dependencies": {
+    "@epicgames-ps/lib-pixelstreamingfrontend-ue5.5": "^1.3.0",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "express": "^5.2.1",
+    "framer-motion": "^13.4.0",
+    "lucide-react": "^1.47.0",
+    "multer": "^2.4.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3",
+    "three": "^0.186.0",
+    "tsx": "^4.23.13",
+    "web-push": "^3.6.7",
+    "ws": "^8.21.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/three": "^0.186.0",
+    "@types/web-push": "^3.6.4",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

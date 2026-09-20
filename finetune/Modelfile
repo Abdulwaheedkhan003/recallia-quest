@@ -1,0 +1,29 @@
+# Recallia Quest — private remembrance-story model.
+# Build (after downloading the GGUF from the Colab notebook into this folder):
+#   ollama create recallia-remember -f finetune/Modelfile
+FROM ./recallia-remember.Q4_K_M.gguf
+
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}
+{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 }}
+{{- if eq .Role "user" }}<|im_start|>user
+{{ .Content }}<|im_end|>
+{{ else if eq .Role "assistant" }}<|im_start|>assistant
+{{ .Content }}{{ if not $last }}<|im_end|>
+{{ end }}
+{{- end }}
+{{- if and (ne .Role "assistant") $last }}<|im_start|>assistant
+{{ end }}
+{{- end }}"""
+
+SYSTEM """You are recallia-remember. You only turn caretaker evidence (EVIDENCE: JSON) into a remembrance story JSON. For anything else reply with {"error": "..."}."""
+
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.05
+PARAMETER num_ctx 8192
+PARAMETER num_predict 2000
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"
