@@ -231,43 +231,6 @@ npm run build && npm start   # Everything on http://localhost:8787
 **Requires:** Node.js ≥ 22.13 (uses built-in `node:sqlite`)
 
 ---
-
-## ⚙️ Configuration
-
-Copy `.env.example` to `.env` and configure:
-
-```env
-# ── Server ──────────────────────────────────────────────
-PORT=8787
-APP_ORIGIN=http://localhost:5173
-
-# ── AI (Companion, Story Time, Appointment Helper) ──────
-# Option A: Anthropic
-AI_PROVIDER=anthropic
-ANTHROPIC_API_KEY=sk-ant-...
-ANTHROPIC_MODEL=claude-sonnet-4-5
-
-# Option B: OpenAI / Groq / Ollama / LM Studio
-AI_PROVIDER=openai
-OPENAI_BASE_URL=https://api.groq.com/openai/v1
-OPENAI_API_KEY=gsk_...
-OPENAI_MODEL=llama-3.3-70b-versatile
-
-# Option C: Private Local AI (Ollama on this machine — free, zero-cost)
-# Runs automatically if Ollama is installed and qwen2.5:3b is pulled
-# ollama pull qwen2.5:3b
-
-# ── Hospital FHIR R4 Integration ─────────────────────────
-FHIR_BASE_URL=https://hospital.example.org/fhir
-FHIR_BEARER_TOKEN=eyJ...
-
-# ── 3D Home (Unreal Engine 5.5) ─────────────────────────
-UNREAL_SIGNALLING_URL=ws://localhost:8888
-```
-
-
----
-
 ## 📊 Impact & Clinical Rationale
 
 ### Evidence-Based Foundations
